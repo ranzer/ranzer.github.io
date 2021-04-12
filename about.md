@@ -1,30 +1,19 @@
 ---
 layout: page
-title: About
+title: About me
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+I am Zoran Radovanovic, an IT professional with more then 10 years of experience in software engineering and system administration.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+I started my IT journey in 2007 as a web developer on Java technology stack which included technologies like JSP, Struts and Spring. At that time I also worked part-time on projects that employed Microsoft technologies like C#, ASP.NET and MS SQL Server.
+From 2010 till date am I employed full time at Treasury of Republic Serbia.\\
+At Treasury I worked as full stack web developer and system administrator.
 
-There are currently two themes built on Poole:
+Some of my work experience include but are not limited to:
+* developing enterprise web applications;
+* creating IT processes automation solutions;
+* building CI/CD pipelines;
+* IaC;
+* creating and automating unit and integration tests.
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
-
-Learn more and contribute on [GitHub](https://github.com/poole).
-
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+I am especially interest in applying machine learning techniques to solve IT and business problems.
