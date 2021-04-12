@@ -2,9 +2,6 @@
 markdown:         redcarpet
 highlighter:      rouge
 
-# Permalinks
-relative_permalinks: false
-
 # Setup
 title:            Hyde
 tagline:          'A Jekyll theme'
