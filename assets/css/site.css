@@ -1,0 +1,16 @@
+.avatar-user {
+  border: 10px;
+  border-radius: 50%;
+  margin: 0 auto;
+  top: 1rem;	
+}
+
+.copyright {
+  bottom: 0;
+  margin: 0 2rem 1rem;
+  position: absolute;
+}
+
+.sidebar-nav {
+  margin-top: 2rem;
+}
