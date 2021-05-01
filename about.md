@@ -16,6 +16,5 @@ Some of my work experience include but are not limited to:
 * IaC;
 * creating and automating unit and integration tests.
 
-I am certified TensorFlow developer and AWS cloud pratitioner.
-
+I am certified TensorFlow developer and AWS cloud pratitioner. 
 I am especially interest in applying machine learning techniques to solve IT and business problems.
