@@ -4,8 +4,9 @@ title: Compromised Zimbra account mitigation
 ---
 
 [Introduction](#introduction)\\
-[System Architecture](#conclusion)\\
-[The Code](#code)\\
+[Zimbra System Architecture](#zimbrasystemarchitecture)\\
+[The Project Structure](#theprojectstructure)\\
+[The Main Script](themainscript)\\
 [References](#references)
 
 ## Introduction
@@ -20,7 +21,7 @@ compromised and prompt response is required to reset user's password and optiona
 
 The code is tested in single server Zimbra deployment environment with external Microsoft Active Directory server for authentication.
 
-## The code
+## The Project Structure
 
 The project has the following structure:
 
@@ -56,5 +57,9 @@ The workflow of the ./src/hacked_zimbra_account_mitigation.bash script is as fol
 6. If required disable lockout policy on Zimbra for each provided mail account (if we set strong password then we can disable failed login policy on Zimbra in order to prevent mail account lockout).
 7. Read mail template text and substitute placeholders for email addresses, passwords and company's logo with appropriate content.
 8. Send formatted email body to appropriate recipients.
+
+## The Main Script
+
+The Main Script
 
 ## References
