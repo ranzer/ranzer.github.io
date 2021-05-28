@@ -2,7 +2,7 @@
   border: 10px;
   border-radius: 50%;
   margin: 0 auto 10%;
-  top: 1rem;	
+  top: 1rem;
 }
 
 .sidebar-nav {
@@ -11,4 +11,12 @@
 
 .sidebar-sticky .copyright {
   margin-top: 40%;
+}
+
+.picture {
+  margin: 0 auto;
+}
+
+.picture-caption {
+  text-align: center
 }
