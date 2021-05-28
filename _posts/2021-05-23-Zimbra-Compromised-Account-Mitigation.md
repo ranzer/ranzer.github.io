@@ -4,9 +4,10 @@ title: Compromised Zimbra account mitigation
 ---
 
 [Introduction](#introduction)\\
-[Zimbra System Architecture](#zimbrasystemarchitecture)\\
-[The Project Structure](#theprojectstructure)\\
-[The Main Script](themainscript)\\
+[Zimbra System Architecture](#zimbra-system-architecture)\\
+[The Project Structure](#the-project-structure)\\
+[The Main Script Functions](#the-main-script-functions)\\
+[The Usage example](#the-usage-example)\\
 [References](#references)
 
 ## Introduction
@@ -20,7 +21,12 @@ compromised and prompt response is required to reset user's password and optiona
 ## Zimbra System Architecture
 
 The code is tested in single server Zimbra deployment environment with external Microsoft Active Directory server for authentication.
+In single server Zimbra deployment services like web proxy, mailbox and MTA are installed on a single server:
 
+<figure>
+  <img class="picture" src="/assets/images/system_architecture.png" />
+  <figcaption class="picture-caption">Picture 1. Single server deployment</figcaption>
+</figure>
 ## The Project Structure
 
 The project has the following structure:
@@ -58,8 +64,30 @@ The workflow of the ./src/hacked_zimbra_account_mitigation.bash script is as fol
 7. Read mail template text and substitute placeholders for email addresses, passwords and company's logo with appropriate content.
 8. Send formatted email body to appropriate recipients.
 
-## The Main Script
+## The Main Script Functions
 
-The Main Script
+The [main](https://github.com/ranzer/compromised_zimbra_account_mitigation/blob/main/src/hacked_zimbra_account_mitigation.bash){:target="_blank"} script consists of the following functions:
+
+1. **usage** - prints info how to invoke the script.
+2. **check_args** - obtains options and their values from the defined list of parameters, if not all required options are provided invokes the usage function.
+3. **get_email_credentials_formatted** - puts an array of email addresses and passwords into the HTML format.
+4. **get_email_body_formatted** - replaces placholders for email addresses, passwords and company's logo in the message body template.
+5. **generate_password** - generates random password, allows specified the password length, default 32 chars.
+6. **get_new_passwords** - for each email address generates new password and returns and array of email address/password pairs.
+7. **update_passwords** - updates mail account password foreach email address in an array of email address/password pairs.
+8. **disable_ad_auth** - disables Active Directory authentication for each mail address provided.
+9. **enable_lockout_policy** - enables or disables failed login policy for each mail address provided.
+10. **send_email** - sends an email with updated credentials.
+11. **main** - the function containing the program workflow.
+
+## The Usage Example
+
+Let us suppose that we want to disable Active Directory authentication and failed login policy for user1,
+user2 and user3 mail accounts belonging to example.com mail domain.
+The [main](https://github.com/ranzer/compromised_zimbra_account_mitigation/blob/main/src/hacked_zimbra_account_mitigation.bash){:target="_blank"} script is invoked in the following way:
+
+> ./src/hacked_zimbra_account_mitigation.bash -c ./config/mail.config -d 1 -l 0 -a user1@example.com user2@example.com user3@example.com
 
 ## References
+
+1. [Bats-core](https://github.com/bats-core/bats-core)
